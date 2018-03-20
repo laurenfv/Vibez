@@ -60,9 +60,9 @@ $.ajax({
    success: function(data) { 
      // Do something with the returned data
        console.log(data);
-       console.log(data.audio_features.energy);
-       console.log(data.items.energy);
-       console.log(data.items.audio_features.energy);
+//       console.log(data.audio_features.energy);
+//       console.log(data.items.energy);
+//       console.log(data.items.audio_features.energy);
      //       
    }
 });
