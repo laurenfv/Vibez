@@ -59,10 +59,14 @@ $.ajax({
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
    success: function(data) { 
      // Do something with the returned data
+<<<<<<< HEAD
        console.log(data);
        console.log(data.audio_features.energy);
        console.log(data.items.audio_features.energy);
        
+=======
+       console.log(data.items.energy);
+>>>>>>> 0fb3151214c43637ece4a7517890f5fb7b672be0
 //       
    }
 });
