@@ -52,28 +52,3 @@ const scopes = [
 if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 }
-
-
-var url1 = 'https://api.spotify.com/v1/tracks';
-var url2 = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
-
-$.ajax({
-   url: url2,
-   type: "GET",
-   beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-   success: function(data) { 
-     // Do something with the returned data
-       console.log(data);
-//       console.log(data.audio_features.energy);
-//       console.log(data.items.energy);
-//       console.log(data.items.audio_features.energy);
-     //       
-   }
-});
-
-
-// SCOPES's array 
-
-// https://beta.developer.spotify.com/documentation/general/guides/scopes/
-
-// If no scopes are requested, only public resources (e.g. public playlists) will be accessible. Read more about scopes at Using Scopes.
