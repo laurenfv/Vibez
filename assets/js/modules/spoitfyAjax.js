@@ -11,12 +11,12 @@ $.ajax({
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
    success: function(data) { 
      // Do something with the returned data
-       console.log(data);
+      console.log(data);
 //       console.log(data.audio_features.energy);
 //       console.log(data.items.energy);
 //       console.log(data.items.audio_features.energy);
-        for (i = 0; data.items.length; i++){
-            console.log(data.items[i].id);
+        for (i = 0; data.categories.items.length; i++){
+            console.log(data.categories.items[i].id);
         }
      //       
    }
