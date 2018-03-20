@@ -54,7 +54,7 @@ if (!_token) {
 }
 
 $.ajax({
-   url: "https://api.spotify.com/v1/audio-features",
+   url: "https://api.spotify.com/v1/audio-features/06AKEBrKUckW0KREUWRnvT",
    type: "GET",
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
    success: function(data) { 
