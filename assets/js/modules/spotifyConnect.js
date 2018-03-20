@@ -55,7 +55,8 @@ if (!_token) {
 
 var urlTracks = 'https://api.spotify.com/v1/tracks';
 var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
-var urlCategories = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
+var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
+var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
 
 var categoriesArray = [];
 
@@ -69,9 +70,11 @@ $.ajax({
 //       console.log(data.audio_features.energy);
 //       console.log(data.items.energy);
 //       console.log(data.items.audio_features.energy);
-        for (i = 0; data.playlists.items.length; i++){
-            console.log(data.playlists.items[i].id);
+        for (i = 0; data.categories.items.length; i++){
+            categoriesArray.push(data.categories.items[i].id);
         }
+
+        console.log (categoriesArray);
      //       
    }
 });
