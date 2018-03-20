@@ -1,4 +1,4 @@
-//SPOTIFY API
+
 
 //create function to convert score to mood
 // var moodMaker = function(score){
@@ -36,3 +36,18 @@
             // }
     //return displaySongs;
 //}
+var urlAudioFeatures = "https://api.spotify.com/v1/audio-features/06AKEBrKUckW0KREUWRnvT";
+// Make a call using the token
+$.ajax({
+   url: urlAudioFeatures,
+   type: "GET",
+   beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
+   success: function(data) { 
+    console.log(data);
+     // Do something with the returned data
+     // data.items.map(function(artist) {
+     //   let item = $('<li>' + artist.name + '</li>');
+     //   item.appendTo($('#top-artists'));
+     });
+   }
+});
