@@ -57,7 +57,7 @@ var urlTracks = 'https://api.spotify.com/v1/tracks';
 var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
 var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
 var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
-var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_tracks=0c6xIDDpzE81m2q797ordA&min_energy=0.4&min_popularity=50&market=US'
+var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=metal&min_energy=0.0&min_popularity=0&limit=100&market=US'
 
 var categoriesArray = [];
 
