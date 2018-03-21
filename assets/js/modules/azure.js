@@ -1,5 +1,24 @@
 var score;
 
+// create function to convert score to mood
+var moodMaker = function(number){
+    if (number <= 20) {
+        return number = "mad";
+    }
+    if (number <= 40 && number > 20){
+        return number = "sad";
+    }
+    if (number <= 60 && number > 40){
+        return number = "neutral";
+    }
+    if (number <= 80 && number > 60){
+        return number = "happy";
+    }
+    if (number <= 100 && number > 80){
+        return number = "ecstatic";
+    }
+}
+
 $(function() {
     var userInput = "I hate peanut butter ice cream.";
     var params = {
@@ -36,24 +55,5 @@ $(function() {
     });
 });
 
-// create function to convert score to mood
-var moodMaker = function(number){
-    if (number <= 20) {
-        return number = "mad";
-    }
-    if (number <= 40 && number > 20){
-        return number = "sad";
-    }
-    if (number <= 60 && number > 40){
-        return number = "neutral";
-    }
-    if (number <= 80 && number > 60){
-        return number = "happy";
-    }
-    if (number <= 100 && number > 80){
-        return number = "ecstatic";
-    }
-}
-
-azureScore = moodMaker(score);
+var azureScore = moodMaker(score);
 console.log(azureScore);
