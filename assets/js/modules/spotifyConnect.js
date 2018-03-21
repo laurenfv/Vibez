@@ -70,7 +70,7 @@ $.ajax({
 //       console.log(data.audio_features.energy);
 //       console.log(data.items.energy);
 //       console.log(data.items.audio_features.energy);
-        for (i = 0; data.categories.items.length; i++){
+        for (var i = 0; data.categories.items.length; i++){
             categoriesArray.push(data.categories.items[i].id);
         }
 
