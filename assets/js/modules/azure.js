@@ -1,4 +1,5 @@
 var score;
+var azureScore;
 
 // create function to convert score to mood
 var moodMaker = function(number){
@@ -48,7 +49,7 @@ $(function() {
         // alert("success");
         score = Math.round(data.documents[0].score * 100);
         console.log(score);
-        var azureScore = moodMaker(score);
+        azureScore = moodMaker(score);
         console.log(azureScore);
     })
     .fail(function() {
