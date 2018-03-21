@@ -37,21 +37,21 @@ $(function() {
 });
 
 // create function to convert score to mood
-var moodMaker = function(score){
-    if (score <= 20) {
-        return score = "mad";
+var moodMaker = function(number){
+    if (number <= 20) {
+        return number = "mad";
     }
-    if (score <= 40 && score > 20){
-        return score = "sad";
+    if (number <= 40 && number > 20){
+        return number = "sad";
     }
-    if (score <= 60 && score > 40){
-        return score = "neutral";
+    if (number <= 60 && number > 40){
+        return number = "neutral";
     }
-    if (score <= 80 && score > 60){
-        return score = "happy";
+    if (number <= 80 && number > 60){
+        return number = "happy";
     }
-    if (score <= 100 && score > 80){
-        return score = "ecstatic";
+    if (number <= 100 && number > 80){
+        return number = "ecstatic";
     }
 }
 
