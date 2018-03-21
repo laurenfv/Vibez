@@ -48,12 +48,11 @@ $(function() {
         // alert("success");
         score = Math.round(data.documents[0].score * 100);
         console.log(score);
+        var azureScore = moodMaker(score);
+        console.log(azureScore);
     })
     .fail(function() {
         // alert("error");
         console.log("error");
     });
 });
-
-var azureScore = moodMaker(score);
-console.log(azureScore);
