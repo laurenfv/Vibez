@@ -35,3 +35,25 @@ $(function() {
         console.log("error");
     });
 });
+
+// create function to convert score to mood
+var moodMaker = function(score){
+    if (score <= 20) {
+        return score = "mad";
+    }
+    if (score <= 40 && score > 20){
+        return score = "sad";
+    }
+    if (score <= 60 && score > 40){
+        return score = "neutral";
+    }
+    if (score <= 80 && score > 60){
+        return score = "happy";
+    }
+    if (score <= 100 && score > 80){
+        return score = "ecstatic";
+    }
+}
+
+azureScore = moodMaker(score);
+console.log(azureScore);
