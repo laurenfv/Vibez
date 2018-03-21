@@ -17,7 +17,7 @@ var moodMaker = function(score){
     }
 }
 
-azureScore = moodmaker(score);
+azureScore = moodMaker(score);
 console.log(azureScore);
 
 //get songIds from the database
