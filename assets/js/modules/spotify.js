@@ -1,5 +1,3 @@
-
-
 //create function to convert score to mood
 // var moodMaker = function(score){
 //     if (score <= 20) {

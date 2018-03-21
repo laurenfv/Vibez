@@ -53,27 +53,29 @@ if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 }
 
+var urlTracks = 'https://api.spotify.com/v1/tracks';
+var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
+var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
+var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
+var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=metal&min_energy=0.0&min_popularity=0&limit=100&market=US'
 
-var url1 = 'https://api.spotify.com/v1/tracks';
-var url2 = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
+var categoriesArray = [];
 
 $.ajax({
-   url: url2,
+   url: urlRecommendations,
    type: "GET",
    beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
    success: function(data) { 
      // Do something with the returned data
-       console.log(data);
+      console.log(data);
 //       console.log(data.audio_features.energy);
 //       console.log(data.items.energy);
 //       console.log(data.items.audio_features.energy);
+        // for (var i = 0; i < data.categories.items.length; i++){
+        //     categoriesArray.push(data.categories.items[i].id);
+        // }
+
+        // console.log (categoriesArray);
      //       
    }
 });
-
-
-// SCOPES's array 
-
-// https://beta.developer.spotify.com/documentation/general/guides/scopes/
-
-// If no scopes are requested, only public resources (e.g. public playlists) will be accessible. Read more about scopes at Using Scopes.
