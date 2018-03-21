@@ -18,7 +18,7 @@ var moodMaker = function(score){
 }
 
 azureScore = moodmaker(score);
-console.log(score);
+console.log(azureScore);
 
 //get songIds from the database
     //store them into an array?
