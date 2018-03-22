@@ -148,10 +148,10 @@ $(function() {
      //       console.log(data.items.energy);
      //       console.log(data.items.audio_features.energy);
              for (var i = 0; i < data.tracks.length; i++){
-                 categoriesArray.push(data.tracks[i].id);
+                 displaySongs.push(data.tracks[i].id);
              }
      
-             console.log (categoriesArray);
+             console.log (displaySongs);
           //       
         }
      })
