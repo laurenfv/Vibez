@@ -53,11 +53,11 @@ if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 }
 
-var urlTracks = 'https://api.spotify.com/v1/tracks';
-var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
-var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
-var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
-var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=metal&min_energy=0.0&min_popularity=0&limit=100&market=US'
+// var urlTracks = 'https://api.spotify.com/v1/tracks';
+// var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
+// var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
+// var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
+var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.8&max_valence=1.0&min_energy=0.8&max_energy=1.0&min_dancibility=0.8&max_dancibility=1.0&limit=5&market=US'
 
 var categoriesArray = [];
 
@@ -71,11 +71,11 @@ $.ajax({
 //       console.log(data.audio_features.energy);
 //       console.log(data.items.energy);
 //       console.log(data.items.audio_features.energy);
-        // for (var i = 0; i < data.categories.items.length; i++){
-        //     categoriesArray.push(data.categories.items[i].id);
-        // }
+        for (var i = 0; i < data.tracks.length; i++){
+            categoriesArray.push(data.tracks[i].id);
+        }
 
-        // console.log (categoriesArray);
+        console.log (categoriesArray);
      //       
    }
 });
