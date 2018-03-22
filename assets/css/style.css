@@ -10,6 +10,10 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.40;
 }
+h2{
+  text-align: center;
+}
+
 .h1,
 .h2,
 .h3,
@@ -1239,7 +1243,7 @@ body.container {
   box-shadow: none;
 }
 .btn-default {
-  color: #788188 !important;
+  color: #4cb6cb !important;
   background-color: #fff;
   border-color: #dbe2e7;
   border-bottom-color: #d5dde3;
@@ -2819,7 +2823,7 @@ a.bg-light:focus {
   color: #fff;
 }
 .text-muted {
-  color: #939aa0;
+  color: #4cb6cb;
 }
 .pos-rlt {
   position: relative;
