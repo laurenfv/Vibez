@@ -28,7 +28,7 @@
   <script src="assets/js/lib/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
   <!--  azure -->
-  <script type="text/javascript" src="assets/js/modules/azure.js"></script>
+  <!--  <script type="text/javascript" src="assets/js/modules/azure.js"></script>-->
   <!--  Spotify Connection -->
   <script src="assets/js/modules/spotifyConnect.js" defer></script>
   <!--  Spotify API -->
@@ -197,6 +197,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <span class="thumb-sm avatar pull-left m-l-xs">                        
                         <img src="https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F706470%2Fscreenshots%2F3492594%2Fpineappledribbble_centered_1x.png&f=1" class="dker" alt="...">
+                        
                         <i class="on b-black"></i>
                       </span>
                       <span class="hidden-nav-xs clear">
@@ -250,26 +251,23 @@
                       <span class="bar5 a5 bg-danger dker"></span>
                     </span>
                   </h2>
+                  <!-- USER INPUT -->
                    <form>
                     <div class="input-group" style="margin-bottom: 10px; margin-top: 20px;">
-                      <input type="text" class="form-control" style="width:100%;height:70px; text-align: center; font-size: 20px; color: #4cb6cb" placeholder="Enter your phrase and set the mood!">
+                      <input id="userInput" type="text" class="form-control" style="width:100%;height:70px; text-align: center; font-size: 20px; color: #4cb6cb" placeholder="Enter your phrase and set the mood!">
                         <div class="input-group-btn">
-                          <button class="btn btn-default" style="height:70px" type="submit">
+                          <button id="userButton" class="btn btn-default" style="height:70px" type="submit">
                             <i class="fas fa-music"></i>
                           </button>
                         </div>
                     </div>
                   </form>
                 <div id="spotify-widget" style="text-align: center">
-                <iframe src="https://open.spotify.com/embed?uri=spotify:album:1DFixLWuPkv3KT3TnV35m3" width="100%" height="450" frameborder="0" allowtransparency="true" allow="encrypted-media">
-                </iframe>
+<!--                 HERE IFRAMES-->
                 </div>  
                 </section>
               </section>
-            </section> 
-                </section>
               </section>              
-            </aside>
           </section>
           <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
         </section>
@@ -290,16 +288,18 @@
   <script type="text/javascript" src="assets/js/lib/jPlayer/add-on/jplayer.playlist.min.js"></script>
   <script type="text/javascript" src="assets/js/lib/jPlayer/demo.js"></script>
   <!-- Jplayer end-->
+  
   <!--  *** MODULES ***-->
+  
   <!--  firebase -->
-  <!-- <script type="text/javascript" src="assets/js/modules/firebase.js"></script> -->
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script type="text/javascript" src="assets/js/modules/firebase.js"></script> 
+  
   <!--  spotify -->
-  <script type="text/javascript" src="assets/js/modules/spotify.js"></script>
   <!--  domManipulation -->
-  <script type="text/javascript" src="assets/js/modules/domManipulation.js"></script>
+<!--  <script type="text/javascript" src="assets/js/modules/domManipulation.js"></script>-->
   <!--  main -->
-  <script type="text/javascript" src="assets/js/main.js"></script>
+<!--  <script type="text/javascript" src="assets/js/main.js"></script>-->
 
 </body>
 </html>
