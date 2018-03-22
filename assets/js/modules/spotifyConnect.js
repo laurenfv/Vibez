@@ -81,7 +81,7 @@ var urlMaker = function(mood){
   }
 }
 
-queryURL = urlMaker (azureScore);
+queryURL = urlMaker(azureScore);
 
 $.ajax({
    url: queryURL,
