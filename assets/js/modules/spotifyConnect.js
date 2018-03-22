@@ -191,7 +191,7 @@ function ajaxCall() {
         // alert("error");
         console.log("error");
     });
-});
+};
 
 // ALL CALLBACKS
 submitInput();  
