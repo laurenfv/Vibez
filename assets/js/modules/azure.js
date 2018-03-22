@@ -1,5 +1,4 @@
 var score;
-var azureScore;
 
 $(function() {
     var userInput = "I hate peanut butter ice cream.";
@@ -55,6 +54,8 @@ var moodMaker = function(number){
         return number = "ecstatic";
     }
 }
+
+var azureScore;
 
 azureScore = moodMaker(score);
 console.log(azureScore);
