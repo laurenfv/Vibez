@@ -136,27 +136,28 @@ $(function() {
         console.log(azureScore);
         queryURL = urlMaker(azureScore);
     })
+    .then(function(){
+      $.ajax({
+        url: queryURL,
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
+        success: function(data) { 
+          // Do something with the returned data
+           console.log(data);
+     //       console.log(data.audio_features.energy);
+     //       console.log(data.items.energy);
+     //       console.log(data.items.audio_features.energy);
+             for (var i = 0; i < data.tracks.length; i++){
+                 categoriesArray.push(data.tracks[i].id);
+             }
+     
+             console.log (categoriesArray);
+          //       
+        }
+     })
+    })
     .fail(function() {
         // alert("error");
         console.log("error");
     });
-});
-
-$.ajax({
-   url: queryURL,
-   type: "GET",
-   beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-   success: function(data) { 
-     // Do something with the returned data
-      console.log(data);
-//       console.log(data.audio_features.energy);
-//       console.log(data.items.energy);
-//       console.log(data.items.audio_features.energy);
-        for (var i = 0; i < data.tracks.length; i++){
-            categoriesArray.push(data.tracks[i].id);
-        }
-
-        console.log (categoriesArray);
-     //       
-   }
 });
