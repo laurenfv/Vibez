@@ -21,7 +21,7 @@
 // console.log(azureScore);
 
 // create function to convert score to mood
-var moodMaker = function(mood){
+var urlMaker = function(mood){
     if (mood === "mad") {
         return queryURL = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&max_valence=0.2&max_energy=0.2&max_dancibility=0.2&limit=5&market=US";
     }
