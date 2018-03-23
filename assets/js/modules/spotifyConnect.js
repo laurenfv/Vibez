@@ -86,8 +86,6 @@ function submitInput(){
     });
 //    when ENTER key press
     $('#userInput').keypress(function(event){
-        // Cancel the default action, if needed
-        event.preventDefault();
         // Number 13 is the "Enter" key on the keyboard
         if (event.keyCode === 13) {   
             $(userButton).click();    
