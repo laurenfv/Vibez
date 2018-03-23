@@ -69,7 +69,7 @@ var token = _token;
 
 //ClEAR SUBMIT FORM
 function clearInput(){
-    $('#userInput').text('');
+    $('#userInput').val('');
 }
 
 var userButton = $('#userButton');
