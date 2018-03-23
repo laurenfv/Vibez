@@ -76,15 +76,17 @@ function clearInput(){
 var userButton = $('#userButton');
 var userInput = '';
 
-function submitInput(){
-    $(userButton).on('click',function(){
+function doThis(){
         displaySongs = [];
-//        $("#spotify-widget").empty();
         userInput = $('#userInput').val().trim(); 
-        alert(userInput);
         clearInput();
-        ajaxCall();
-    })
+        ajaxCall();    
+}
+
+function submitInput(){
+//    click button
+    $(userButton).on('click',doThis());
+//    when ENTER key press
 }    
 // END OF "GET USER INPUT"
 //*******************************************
