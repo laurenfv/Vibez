@@ -137,6 +137,12 @@ var urlMaker = function(mood){
 }
 
 //********************************************
+var appendIframes = function(arr) {
+  for < var i = 0; i < displaySongs.length; i++ {
+    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + arr[i] + " width='100%' height='450' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+  }
+}
+//********************************************
 function ajaxCall() {
 //    var userInput = "I hate peanut butter ice cream.";
     var params = {
@@ -187,6 +193,7 @@ function ajaxCall() {
                  displaySongs.push(data.tracks[i].id);
              }
              console.log(displaySongs);
+             appendIframes(displaySongs);
           //       
         }
      })
@@ -198,4 +205,4 @@ function ajaxCall() {
 };
 
 // ALL CALLBACKS
-submitInput();  
+submitInput();
