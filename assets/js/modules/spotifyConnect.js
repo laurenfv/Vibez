@@ -157,7 +157,7 @@ var appendIframes = function() {
   $("#spotify-widget").empty();    
   for ( var i = 0; i < displaySongs.length; i++) {
       
-    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='100%' frameborder='2' allowtransparency='true' allow='encrypted-media'></iframe>");
+    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='100%' height='75px' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
   }
 }
 //********************************************
