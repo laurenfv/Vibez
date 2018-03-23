@@ -255,5 +255,6 @@ function ajaxCall() {
 submitInput();
 
 $('#logout').click(function() {
-    location.reload();
+    location.reload(true);
 });
+
