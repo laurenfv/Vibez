@@ -253,3 +253,7 @@ function ajaxCall() {
 
 // ALL CALLBACKS
 submitInput();
+
+$('#logout').click(function() {
+    location.reload();
+});
