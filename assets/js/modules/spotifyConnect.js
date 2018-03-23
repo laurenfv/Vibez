@@ -75,15 +75,16 @@ function clearInput(){
 
 var userButton = $('#userButton');
 var userInput = '';
-
-function doThis(){
+var doThis = function(){
         displaySongs = [];
         userInput = $('#userInput').val().trim(); 
         clearInput();
         ajaxCall();    
-}
+    }
+
 
 function submitInput(){
+   
 //    click button
     $(userButton).on('click',doThis);
 //    when ENTER key press
