@@ -54,7 +54,7 @@ if (!_token) {
 }
 // SAVE TOKEN
 var token = _token;
-alert(token);
+alert('User token'+token);
 // END TOKEN PART
 //*******************************************
 // var urlTracks = 'https://api.spotify.com/v1/tracks';
@@ -63,6 +63,10 @@ alert(token);
 // var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
 //var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.8&max_valence=1.0&min_energy=0.8&max_energy=1.0&min_dancibility=0.8&max_dancibility=1.0&limit=5&market=US'
 
+//ClEAR SUBMIT FORM
+function clearInput(){
+    $('#userInput').text('');
+}
 //*******************************************
 // GET USER INPUT
 
@@ -78,15 +82,15 @@ function submitInput(){
 }    
 // END OF "GET USER INPUT"
 //*******************************************
+
 // PUSH USER INPUT TO FIREBASE
 
 // END OF "PUSH USER INPUT TO FIREBASE"
+
 //*******************************************
-//ClEAR SUBMIT FORM
-function clearInput(){
-    $('#userInput').text('');
-}
-//*******************************************
+
+
+
 //CONVERT USER INPUT
 
 var displaySongs = [];
