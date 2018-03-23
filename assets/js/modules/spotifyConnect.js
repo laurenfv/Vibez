@@ -138,7 +138,7 @@ var urlMaker = function(mood){
 
 //********************************************
 var appendIframes = function(arr) {
-  for < var i = 0; i < displaySongs.length; i++ {
+  for ( var i = 0; i < displaySongs.length; i++) {
     $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + arr[i] + " width='100%' height='450' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
   }
 }
