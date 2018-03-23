@@ -79,7 +79,7 @@ var userInput = '';
 function submitInput(){
 //    click button
     $(userButton).on('click',function(){
-        $('#userInput').attr('placeholder','');
+        $('#userInput').attr('placeholder',' ');
         displaySongs = [];
         userInput = $('#userInput').val().trim(); 
         clearInput();
