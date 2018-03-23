@@ -3973,3 +3973,7 @@ section#content {
   font-weight: 600;
   color: #fff;
 }
+
+a.navbar-brand.text-lt {
+  background-color: #fff;
+}
