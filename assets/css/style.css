@@ -3948,7 +3948,7 @@ section#content {
     border-bottom-left-radius: 20px;
     -webkit-box-shadow: 0 10px 6px -6px #777;
 	-moz-box-shadow: 0 10px 6px -6px #777;
-	box-shadow: 0 10px 6px -6px #777;  
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3); 
     line-height: 100%;
 }
 
@@ -3957,7 +3957,7 @@ section#content {
     border-bottom-right-radius: 20px;
     -webkit-box-shadow: 0 10px 6px -6px #777;
 	-moz-box-shadow: 0 10px 6px -6px #777;
-	box-shadow: 0 10px 6px -6px #777;        
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);        
 }
 
 #musicIcon {
