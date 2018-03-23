@@ -201,6 +201,7 @@ function ajaxCall() {
              console.log(displaySongs);
              appendIframes();
              displaySongs = [];
+             $("#spotify-widget").empty();
           //       
         }
      })
