@@ -79,7 +79,7 @@ var userInput = '';
 function submitInput(){
     $(userButton).on('click',function(){
         displaySongs = [];
-        $("#spotify-widget").empty();
+//        $("#spotify-widget").empty();
         userInput = $('#userInput').val().trim(); 
         alert(userInput);
         clearInput();
