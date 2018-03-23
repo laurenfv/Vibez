@@ -74,10 +74,11 @@ if (!_token) {
            console.log(data.display_name);
            $('<span>Welcome, </span><span id="userNameSpan">'+userName+'</span>').insertAfter( "#insertAfterHere" );
           // Check if the user have profile image
-           if (userImagesArray != emptyArray){
+//           if (userImagesArray != emptyArray){
                $('#userAvatar').attr('src',userImagesArray[0].url);
-           }else {
-               $('#userAvatar').attr('src','assets/img/userNullAvatar.png');
+            alert(userImagesArray[0].url);
+//           }else {
+//               $('#userAvatar').attr('src','assets/img/userNullAvatar.png');
            }   
         }
      })
