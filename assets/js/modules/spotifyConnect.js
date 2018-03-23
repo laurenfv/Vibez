@@ -78,6 +78,8 @@ var userInput = '';
 
 function submitInput(){
     $(userButton).on('click',function(){
+        displaySongs = [];
+        $("#spotify-widget").empty();
         userInput = $('#userInput').val().trim(); 
         alert(userInput);
         clearInput();
@@ -200,8 +202,7 @@ function ajaxCall() {
              }
              console.log(displaySongs);
              appendIframes();
-             displaySongs = [];
-             $("#spotify-widget").empty();
+             
           //       
         }
      })
