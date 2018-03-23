@@ -61,7 +61,23 @@ if (!_token) {
 // var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
 // var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
 //var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.8&max_valence=1.0&min_energy=0.8&max_energy=1.0&min_dancibility=0.8&max_dancibility=1.0&limit=5&market=US'
-
+// SPOTIFY AJAX TO GET USER INFO
+    $.ajax({
+        url: "https://api.spotify.com/v1/me",
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
+        success: function(data) { 
+          // Do something with the returned data
+           var userName = data.display_name;   
+           console.log(data.display_name);
+           $(userName).insertAfter( "#insertAfterHere" );
+        }
+     })
+    
+    .fail(function() {
+        // alert("error");
+        console.log("error");
+    });
 
 //*******************************************
 // GET USER INPUT
@@ -219,24 +235,7 @@ function ajaxCall() {
         // alert("error");
         console.log("error");
     });
-    // SPOTIFY AJAX TO GET USER INFO
-    $.ajax({
-        url: "https://api.spotify.com/v1/me",
-        type: "GET",
-        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
-        success: function(data) { 
-          // Do something with the returned data
-           var userName = data.display_name;   
-           console.log(data.display_name);
-           $( "<p>"+userName+"</p>" ).insertAfter( "#insertAfterHere" );
-
-        }
-     })
     
-    .fail(function() {
-        // alert("error");
-        console.log("error");
-    });
 };
 
 // ALL CALLBACKS
