@@ -80,7 +80,7 @@ if (!_token) {
 //           }else {
 //               $('#userAvatar').attr('src','assets/img/userNullAvatar.png');
            }   
-        }
+        
      })
               
     .fail(function() {
