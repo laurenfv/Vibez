@@ -10,6 +10,11 @@ var showMood = fucntion(snapshot){
   $(@Moodreader).text(@val.givenmood)
 }
 
+//send text of a users' search button to search bar
+var usePastSearch = function(){
+  var buttonText = $(this).text();
+  $("input[name='userString']").val(buttonText);
+}
 //-------------------------------------------------------------------
 //PUSHES OTHER USER INPUTS TO HTML
 var updateStrings = function(snapshot){

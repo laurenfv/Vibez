@@ -34,4 +34,8 @@ StringsRef.on("child_added", handleStringPush);
 
 //on click of any old search, push text to string
 $("#pastSearch").click(@pushTextToForm);
+
+//event listener for usePastSearch
+$("#stringHolder").on("click", '.pastSearch', usePastSearch);
+
 //------------------------------------------------------------------- 
