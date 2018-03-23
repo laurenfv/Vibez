@@ -52,17 +52,49 @@ const scopes = [
 if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 }
-
+// SAVE TOKEN
+var token = _token;
+alert('User token'+token);
+// END TOKEN PART
+//*******************************************
 // var urlTracks = 'https://api.spotify.com/v1/tracks';
 // var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
 // var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
 // var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
 //var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.8&max_valence=1.0&min_energy=0.8&max_energy=1.0&min_dancibility=0.8&max_dancibility=1.0&limit=5&market=US'
 
-var categoriesArray = [];
+//ClEAR SUBMIT FORM
+function clearInput(){
+    $('#userInput').text('');
+}
+//*******************************************
+// GET USER INPUT
 
+var userButton = $('#userButton');
+var userInput = '';
+
+function submitInput(){
+    $(userButton).on('click',function(){
+        userInput = $('#userInput').val().trim(); 
+        alert(userInput);
+        clearInput();
+    })
+}    
+// END OF "GET USER INPUT"
+//*******************************************
+
+// PUSH USER INPUT TO FIREBASE
+
+// END OF "PUSH USER INPUT TO FIREBASE"
+
+//*******************************************
+
+
+
+//CONVERT USER INPUT
+
+var displaySongs = [];
 var queryURL = "";
-
 var score;
 var azureScore;
 
@@ -103,8 +135,9 @@ var urlMaker = function(mood){
   }
 }
 
-$(function() {
-    var userInput = "I hate peanut butter ice cream.";
+//********************************************
+function ajaxCall() {
+//    var userInput = "I hate peanut butter ice cream.";
     var params = {
         "documents": [
             {
@@ -114,6 +147,7 @@ $(function() {
             }
         ]
     }
+    // Azure API key
     var string1 = "932ad411f62c4486a61b8b2a57382644";
     var string2 = JSON.stringify(params);
   
@@ -137,6 +171,7 @@ $(function() {
         queryURL = urlMaker(azureScore);
     })
     .then(function(){
+        
       $.ajax({
         url: queryURL,
         type: "GET",
@@ -148,10 +183,10 @@ $(function() {
      //       console.log(data.items.energy);
      //       console.log(data.items.audio_features.energy);
              for (var i = 0; i < data.tracks.length; i++){
-                 categoriesArray.push(data.tracks[i].id);
+                 displaySongs.push(data.tracks[i].id);
              }
      
-             console.log (categoriesArray);
+             console.log (displaySongs);
           //       
         }
      })
@@ -160,4 +195,7 @@ $(function() {
         // alert("error");
         console.log("error");
     });
-});
+};
+
+// ALL CALLBACKS
+submitInput();  
