@@ -75,19 +75,24 @@ function clearInput(){
 
 var userButton = $('#userButton');
 var userInput = '';
-var doThis = function(){
+
+function submitInput(){
+//    click button
+    $(userButton).on('click',function(){
         displaySongs = [];
         userInput = $('#userInput').val().trim(); 
         clearInput();
-        ajaxCall();    
-    }
-
-
-function submitInput(){
-   
-//    click button
-    $(userButton).on('click',doThis);
+        ajaxCall();      
+    });
 //    when ENTER key press
+    $('#userInput').keypress(function(event){
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {   
+            $(userButton).click();    
+        }
+    })
 }    
 // END OF "GET USER INPUT"
 //*******************************************
