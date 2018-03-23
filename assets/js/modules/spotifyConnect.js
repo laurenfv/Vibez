@@ -68,9 +68,17 @@ if (!_token) {
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
         success: function(data) { 
           // Do something with the returned data
-           var userName = data.display_name;   
+           var emptyArray = [];
+           var userName = data.display_name;    
+           var userImagesArray = data.images;    
            console.log(data.display_name);
-           $('<span>Welcome, </span><span id="userNameSpan">'+userName+'</span>').insertAfter( "#insertAfterHere" );
+           $("'<span>Welcome, </span><span id="userNameSpan">'+userName+'</span>'").insertAfter( "#insertAfterHere" );
+          // Check if the user have profile image
+           if (userImagesArray != emptyArray){
+               $('#userAvatar').attr('src',userImagesArray[0]);
+           }else {
+               $('#userAvatar').attr('src','assets/img/userNullAvatar.png');
+           }   
         }
      })
               
