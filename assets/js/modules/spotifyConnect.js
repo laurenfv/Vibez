@@ -52,10 +52,9 @@ const scopes = [
 if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 }
-// SAVE TOKEN
-var token = _token;
-//alert('User token'+token);
+
 // END TOKEN PART
+
 //*******************************************
 // var urlTracks = 'https://api.spotify.com/v1/tracks';
 // var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
@@ -176,7 +175,7 @@ function ajaxCall() {
     // Azure API key
     var string1 = "932ad411f62c4486a61b8b2a57382644";
     var string2 = JSON.stringify(params);
-  
+    // AZURE AJAX CALL
     $.ajax({
         url: "https://westcentralus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment?" + userInput,
         beforeSend: function(xhrObj){
@@ -197,7 +196,7 @@ function ajaxCall() {
         queryURL = urlMaker(azureScore);
     })
     .then(function(){
-        
+    // SPOTIFY AJAX TO GET TRACKS  
       $.ajax({
         url: queryURL,
         type: "GET",
@@ -205,9 +204,7 @@ function ajaxCall() {
         success: function(data) { 
           // Do something with the returned data
            console.log(data);
-     //       console.log(data.audio_features.energy);
-     //       console.log(data.items.energy);
-     //       console.log(data.items.audio_features.energy);
+            
              for (var i = 0; i < data.tracks.length; i++){
                  displaySongs.push(data.tracks[i].id);
              }
@@ -215,6 +212,22 @@ function ajaxCall() {
              appendIframes();
              
           //       
+        }
+     })
+    })
+    .fail(function() {
+        // alert("error");
+        console.log("error");
+    });
+    // SPOTIFY AJAX TO GET USER INFO
+    $.ajax({
+        url: "https://api.spotify.com/v1/me",
+        type: "GET",
+        beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
+        success: function(data) { 
+          // Do something with the returned data
+           console.log('LOGIN'+data);
+            
         }
      })
     })
