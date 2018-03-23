@@ -3968,3 +3968,8 @@ section#content {
     color: #4cb6cb;
     font-weight: bold;
 }
+
+.font-thin {
+  font-weight: auto;
+  color: #fff;
+}
