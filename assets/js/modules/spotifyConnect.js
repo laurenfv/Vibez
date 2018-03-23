@@ -230,7 +230,7 @@ function ajaxCall() {
             
         }
      })
-    })
+    
     .fail(function() {
         // alert("error");
         console.log("error");
