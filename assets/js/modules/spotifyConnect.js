@@ -106,9 +106,9 @@ function submitInput(){
         $('#userInput').attr('placeholder',' ');
         displaySongs = [];
         userInput = $('#userInput').val().trim(); 
-        displayInput();
         clearInput();
-        ajaxCall();      
+        ajaxCall();   
+        displayInput();   
     });
 //    when ENTER key press
     $('#userInput').keypress(function(event){
