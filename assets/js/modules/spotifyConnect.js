@@ -106,6 +106,7 @@ function submitInput(){
         $('#userInput').attr('placeholder',' ');
         displaySongs = [];
         userInput = $('#userInput').val().trim(); 
+        displayInput();
         clearInput();
         ajaxCall();      
     });
@@ -118,6 +119,10 @@ function submitInput(){
         }
     })
 }  
+
+function displayInput {
+    $('#center-vibez').text(userInput);
+}
 
 function avoidSubmit(){
     $("#form1").submit(function(e){
@@ -181,7 +186,6 @@ var urlMaker = function(mood){
 var appendIframes = function() {
   $("#spotify-widget").empty();    
   for ( var i = 0; i < displaySongs.length; i++) {
-      
     $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='100%' height='75px' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
   }
 }
