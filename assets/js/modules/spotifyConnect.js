@@ -75,7 +75,7 @@ if (!_token) {
            $('<span>Welcome, </span><span id="userNameSpan">'+userName+'</span>').insertAfter( "#insertAfterHere" );
           // Check if the user have profile image
            if (userImagesArray != emptyArray){
-               $('#userAvatar').attr('src',userImagesArray[0]);
+               $('#userAvatar').attr('src',userImagesArray[0].url);
            }else {
                $('#userAvatar').attr('src','assets/img/userNullAvatar.png');
            }   
