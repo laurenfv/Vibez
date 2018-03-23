@@ -3963,3 +3963,8 @@ section#content {
 #musicIcon {
     
 }
+
+#userNameSpan {
+    color: #4cb6cb;
+    font-weight: bold;
+}

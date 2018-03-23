@@ -70,10 +70,10 @@ if (!_token) {
           // Do something with the returned data
            var userName = data.display_name;   
            console.log(data.display_name);
-           $(userName).insertAfter( "#insertAfterHere" );
+           $('<span>Welcome, </span><span id="userNameSpan">'+userName+'</span>').insertAfter( "#insertAfterHere" );
         }
      })
-    
+              
     .fail(function() {
         // alert("error");
         console.log("error");
