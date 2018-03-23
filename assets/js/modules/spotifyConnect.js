@@ -120,7 +120,7 @@ function submitInput(){
     })
 }  
 
-function displayInput {
+function displayInput() {
     $('#center-vibez').text(userInput);
 }
 
