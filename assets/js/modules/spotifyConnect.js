@@ -139,7 +139,12 @@ var urlMaker = function(mood){
 //********************************************
 var appendIframes = function() {
   for ( var i = 0; i < displaySongs.length; i++) {
-    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + " width='100%' height='450' frameborder='2' allowtransparency='true' allow='encrypted-media'></iframe>");
+      
+//      <iframe src="https://open.spotify.com/embed?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai"
+//      
+//        frameborder="0" allow="encrypted-media" allowtransparency="true"></iframe>
+      
+    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='50%' height='225' frameborder='2' allowtransparency='true' allow='encrypted-media'></iframe>");
   }
 }
 //********************************************
