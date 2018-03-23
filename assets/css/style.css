@@ -3948,7 +3948,8 @@ section#content {
     border-bottom-left-radius: 20px;
     -webkit-box-shadow: 0 10px 6px -6px #777;
 	-moz-box-shadow: 0 10px 6px -6px #777;
-	box-shadow: 0 10px 6px -6px #777;    
+	box-shadow: 0 10px 6px -6px #777;  
+    line-height: 100%;
 }
 
 #userButton {
@@ -3957,4 +3958,8 @@ section#content {
     -webkit-box-shadow: 0 10px 6px -6px #777;
 	-moz-box-shadow: 0 10px 6px -6px #777;
 	box-shadow: 0 10px 6px -6px #777;        
+}
+
+#musicIcon {
+    
 }
