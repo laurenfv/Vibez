@@ -85,7 +85,7 @@ function doThis(){
 
 function submitInput(){
 //    click button
-    $(userButton).on('click',doThis());
+    $(userButton).on('click',doThis);
 //    when ENTER key press
 }    
 // END OF "GET USER INPUT"
