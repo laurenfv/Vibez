@@ -144,7 +144,7 @@ var appendIframes = function() {
 //      
 //        frameborder="0" allow="encrypted-media" allowtransparency="true"></iframe>
       
-    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='50%' height='225' frameborder='2' allowtransparency='true' allow='encrypted-media'></iframe>");
+    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='50%' background-color='#FFFFFF' height='auto' frameborder='2' allowtransparency='true' allow='encrypted-media'></iframe>");
   }
 }
 //********************************************
