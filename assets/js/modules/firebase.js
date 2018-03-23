@@ -57,6 +57,7 @@ var sendString = function(string){
 //This code works for test.html. Equivalent written in main.js
 //-------------------------------------------------------------------
 // var handleStringSubmit = function(event){
+//	 event.preventDefault();
 //   sendString(getFieldValue(this));
 //   resetForm(this);
 // };
@@ -80,6 +81,10 @@ var sendString = function(string){
 //   $("#stringHolder").prepend("<p class=pastSearches>" + snapshot.val().search + "</p>")
 //   //*READS FROM FIREBASE
 // }
+// var usePastSearch = function(){
+//   var buttonText = $(this).text();
+//   $("input[name='userString']").val(buttonText);
+// }
 //-------------------------------------------------------------------
 
 
@@ -88,14 +93,12 @@ var sendString = function(string){
 //This code works for test.html. Equivalent written in main.js
 //-------------------------------------------------------------------
 // $("#form").submit(handleStringSubmit);
-//-------------------------------------------------------------------
 
-
-//-------------------------------------------------------------------
-//This code works for test.html. Equivalent written in main.js
-//-------------------------------------------------------------------
 // StringsRef.on("child_added", handleStringPush);
   //Whenever a child is added to StringsRef, the function handleStringPush is activated
     //handleStringPush is the event handler, "getFieldValue" will capture the user's
     //input upon clicking submit, and "sendString" will send it to Firebase
+
+//event listener for usePastSearch
+//$("#stringHolder").on("click", '.pastSearch', usePastSearch);
 //-------------------------------------------------------------------
