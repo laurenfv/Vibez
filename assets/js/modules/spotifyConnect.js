@@ -186,8 +186,7 @@ function ajaxCall() {
              for (var i = 0; i < data.tracks.length; i++){
                  displaySongs.push(data.tracks[i].id);
              }
-     
-             console.log (displaySongs);
+             console.log('The display songs'+displaySongs);
           //       
         }
      })
