@@ -226,8 +226,10 @@ function ajaxCall() {
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
         success: function(data) { 
           // Do something with the returned data
+           var userName = data.display_name;   
            console.log(data.display_name);
-            
+           $( "<p>"+userName+"</p>" ).insertAfter( "#insertAfterHere" );
+
         }
      })
     
