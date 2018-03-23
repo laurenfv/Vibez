@@ -226,7 +226,7 @@ function ajaxCall() {
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + _token );},
         success: function(data) { 
           // Do something with the returned data
-           console.log('LOGIN'+data);
+           console.log(data.birthdate);
             
         }
      })
