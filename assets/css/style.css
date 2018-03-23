@@ -3944,8 +3944,17 @@ section#content {
   }
 
 #userInput {
-    border-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     -webkit-box-shadow: 0 10px 6px -6px #777;
 	-moz-box-shadow: 0 10px 6px -6px #777;
 	box-shadow: 0 10px 6px -6px #777;    
+}
+
+#userButton {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+	box-shadow: 0 10px 6px -6px #777;        
 }
