@@ -91,7 +91,13 @@ function submitInput(){
             $(userButton).click();    
         }
     })
-}    
+}  
+
+function avoidSubmit(){
+    $("#form1").submit(function(e){
+    return false;
+});
+}
 // END OF "GET USER INPUT"
 //*******************************************
 
