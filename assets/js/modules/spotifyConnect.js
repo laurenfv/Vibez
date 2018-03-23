@@ -166,19 +166,19 @@ var moodMaker = function(number){
 
 var urlMaker = function(mood){
   if (mood === "mad") {
-      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&max_valence=0.2&max_energy=0.2&limit=5&market=US";
+      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&max_valence=0.2&max_dancibility=0.2&limit=5&market=US";
   }
   if (mood === "sad"){
-      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.2&max_valence=0.4&min_energy=0.2&max_energy=0.4&limit=5&market=US";
+      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.2&max_valence=0.4&min_dancibility=0.2&max_dancibility=0.4&limit=5&market=US";
   }
   if (mood === "neutral"){
-      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.4&max_valence=0.6&min_energy=0.4&max_energy=0.6&limit=5&market=US";
+      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.4&max_valence=0.6&min_dancibility=0.4&max_dancibility=0.6&limit=5&market=US";
   }
   if (mood === "happy"){
-      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.6&max_valence=0.8&min_energy=0.6&max_energy=0.8&limit=5&market=US";
+      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.6&max_valence=0.8&min_dancibility=0.6&max_dancibility=0.8&limit=5&market=US";
   }
   if (mood === "ecstatic"){
-      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.8&min_energy=0.8&limit=5&market=US";
+      return mood = "https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.8&min_dancibility=0.8&limit=5&market=US";
   }
 }
 
@@ -186,7 +186,7 @@ var urlMaker = function(mood){
 var appendIframes = function() {
   $("#spotify-widget").empty();    
   for ( var i = 0; i < displaySongs.length; i++) {
-    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='100%' height='75px' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>");
+    $("#spotify-widget").append("<iframe src='https://open.spotify.com/embed?uri=spotify:track:" + displaySongs[i] + "' width='100%' height='75px' frameborder='0' allowtransparency='false' allow='encrypted-media'></iframe>");
   }
 }
 //********************************************
@@ -253,3 +253,8 @@ function ajaxCall() {
 
 // ALL CALLBACKS
 submitInput();
+
+$('#logout').click(function() {
+    location.reload(true);
+});
+
