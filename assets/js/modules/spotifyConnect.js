@@ -199,7 +199,8 @@ var updateStrings = function(snapshot){
   //*READS FROM FIREBASE
 }
 var usePastSearch = function(){
-  var buttonText = $('.pastSearch').text();
+  clearInput();
+  var buttonText = $(this).text();
   $("input[name='userString']").val(buttonText);
 }
 //-------------------------------------------------------------------
@@ -212,7 +213,7 @@ var usePastSearch = function(){
 StringsRef.on("child_added", handleStringPush);
 
 //event listener for usePastSearch
-$("#stringHolder").on("click", '.pastSearch', usePastSearch);
+$("#appendHere").on("click", '.pastSearch', usePastSearch);
 //-------------------------------------------------------------------
 
 // END OF "PUSH USER INPUT TO FIREBASE"
