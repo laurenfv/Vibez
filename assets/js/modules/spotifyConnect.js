@@ -76,7 +76,7 @@ if (!_token) {
           // Check if the user have profile image
 //           if (userImagesArray != emptyArray){
                $('#userAvatar').attr('src',userImagesArray[0].url);
-            alert(userImagesArray[0].url);
+                //alert(userImagesArray[0].url);
 //           }else {
 //               $('#userAvatar').attr('src','assets/img/userNullAvatar.png');
            }   
