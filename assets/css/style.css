@@ -3982,3 +3982,8 @@ html {
   background-color: #fff;
   box-shadow: 0 4px 1px 0 rgba(0, 0, 0, 0.3);
 } */
+@media (max-width: 767px){
+  #userInput {
+    font-size: 10px;
+  }
+}
