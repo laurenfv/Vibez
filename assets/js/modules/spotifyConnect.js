@@ -192,7 +192,10 @@ var updateStrings = function(snapshot){
     return;
   }
   //*READS FROM FIREBASE
-  $("#stringHolder").prepend("<button class=pastSearch>" + snapshot.val().search + "</button>")
+  $("#stringHolder").prepend(
+    "<li><a href='#'><i class='icon-music-tone icon'></i><span>" + snapshot.val().search + "</span></a></li>"
+   //"<button class=pastSearch>" + snapshot.val().search + "</button>"
+   )
   //*READS FROM FIREBASE
 }
 var usePastSearch = function(){
