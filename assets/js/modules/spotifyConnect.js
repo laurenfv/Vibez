@@ -340,9 +340,10 @@ function ajaxCall() {
     
 };
 
-// ALL CALLBACKS
+// USER CLICK BUTTON OR ENTER
 submitInput();
 
+// RELOAD PAGE 
 $('#logout').click(function() {
     location.reload(true);
 });
