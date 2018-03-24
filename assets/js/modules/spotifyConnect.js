@@ -192,7 +192,7 @@ var updateStrings = function(snapshot){
     return;
   }
   //*READS FROM FIREBASE
-  $("#stringHolder").append(
+  $("#appendHere").append(
     "<li class=pastSearch><a href='#'><span>" + snapshot.val().search + "</span></a></li>"
    //"<button class=pastSearch>" + snapshot.val().search + "</button>"
    )
