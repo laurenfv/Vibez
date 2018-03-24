@@ -3919,7 +3919,7 @@ fieldset[disabled] .i-checks input + i:before {
   }
 }
 
-section#content {
+html {
   background-color: #e74c3c;
   animation: bg-color 15s infinite;
   -webkit-animation: bg-color 15s infinite;
