@@ -23,14 +23,7 @@ var StringsRef = database.ref("Strings");
 //used to reference testing HTML
 var show =  document.getElementById("test");
 
-//WRITE TO DATABASE FUNCTIONS
-///////////////////////////////////////////////////////////////////////////////
-//API keys for Azure are stored on the database beforehand
-//Song IDs were added to Firebase via a JSON file
-//Test to see if JS is working
-
-//firebase setter
-  //This function specifically puses any data in gathers to firebase
+//Sends to firebase
 var sendString = function(string){
 		StringsRef.push({
 			search: string
@@ -40,65 +33,53 @@ var sendString = function(string){
 
 //form utility
 //-------------------------------------------------------------------
-//This code works for test.html. Equivalent written in main.js
-//-------------------------------------------------------------------
-// var resetForm = function(form){
-//   $("input").val("");
-// };
-// var getFieldValue = function(form){
-//   return $("#form").find("input").val();
-// };
+var resetForm = function(form){
+  $("input").val("");
+};
+var getFieldValue = function(form){
+  return $("#form").find("input").val();
+};
 //-------------------------------------------------------------------
 
 
 
 //event handler
 //-------------------------------------------------------------------
-//This code works for test.html. Equivalent written in main.js
-//-------------------------------------------------------------------
-// var handleStringSubmit = function(event){
-//	 event.preventDefault();
-//   sendString(getFieldValue(this));
-//   resetForm(this);
-// };
-
-// var handleStringPush = function(snapshot){
-//   updateStrings(snapshot);
-// }
+var handleStringSubmit = function(event){
+	 event.preventDefault();
+  sendString(getFieldValue(this));
+  resetForm(this);
+}
+var handleStringPush = function(snapshot){
+  updateStrings(snapshot);
+}
 //-------------------------------------------------------------------
 
 
 
 //UI change
 //-------------------------------------------------------------------
-//This code works for test.html. Equivalent written in domManipulation.js
-//-------------------------------------------------------------------
-// var updateStrings = function(snapshot){
-//   if (snapshot.val().search === 0){
-//     return;
-//   }
-//   //*READS FROM FIREBASE
-//   $("#stringHolder").prepend("<p class=pastSearches>" + snapshot.val().search + "</p>")
-//   //*READS FROM FIREBASE
-// }
-// var usePastSearch = function(){
-//   var buttonText = $(this).text();
-//   $("input[name='userString']").val(buttonText);
-// }
+var updateStrings = function(snapshot){
+  if (snapshot.val().search === 0){
+    return;
+  }
+  //*READS FROM FIREBASE
+  $("#stringHolder").prepend("<p class=pastSearches>" + snapshot.val().search + "</p>")
+  //*READS FROM FIREBASE
+}
+var usePastSearch = function(){
+  var buttonText = $(this).text();
+  $("input[name='userString']").val(buttonText);
+}
 //-------------------------------------------------------------------
 
 
 //Bind Event Handler
 //-------------------------------------------------------------------
-//This code works for test.html. Equivalent written in main.js
-//-------------------------------------------------------------------
-// $("#form").submit(handleStringSubmit);
+$("#form").submit(handleStringSubmit);
 
-// StringsRef.on("child_added", handleStringPush);
-  //Whenever a child is added to StringsRef, the function handleStringPush is activated
-    //handleStringPush is the event handler, "getFieldValue" will capture the user's
-    //input upon clicking submit, and "sendString" will send it to Firebase
+StringsRef.on("child_added", handleStringPush);
 
-//event listener for usePastSearch
-//$("#stringHolder").on("click", '.pastSearch', usePastSearch);
+event listener for usePastSearch
+$("#stringHolder").on("click", '.pastSearch', usePastSearch);
 //-------------------------------------------------------------------
