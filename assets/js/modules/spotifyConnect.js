@@ -106,6 +106,7 @@ function submitInput(){
         $('#userInput').attr('placeholder',' ');
         displaySongs = [];
         userInput = $('#userInput').val().trim().toLowerCase();
+        handleStringSubmit;
         clearInput();
         ajaxCall();   
         displayInput();   
@@ -173,8 +174,8 @@ var getFieldValue = function(form){
 //event handler
 //-------------------------------------------------------------------
 var handleStringSubmit = function(event){
-   event.preventDefault();
-  sendString(getFieldValue(this));
+  event.preventDefault();
+  sendString(userInput);
   // resetForm(this);
 }
 var handleStringPush = function(snapshot){
@@ -203,7 +204,7 @@ var usePastSearch = function(){
 
 //Bind Event Handler
 //-------------------------------------------------------------------
-$("#form1").submit(handleStringSubmit);
+//$("#form1").submit(handleStringSubmit);
 
 StringsRef.on("child_added", handleStringPush);
 
