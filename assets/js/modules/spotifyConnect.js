@@ -1,5 +1,9 @@
-//SPOTIFY API - CX
+// GLOBAL VARS
 
+var userButton = $('#userButton');
+var userInput = '';
+
+// SPOTIFY API - CX
 // Get the hash of the url
 const hash = window.location.hash
 .substring(1)
@@ -11,11 +15,13 @@ const hash = window.location.hash
   }
   return initial;
 }, {});
+
 window.location.hash = '';
 
 // Set token
 let _token = hash.access_token;
 
+// This URL won't change
 const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 // Replace with your app's client ID, redirect URI and desired scopes
@@ -53,15 +59,9 @@ if (!_token) {
   window.location = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
 }
 
-// END TOKEN PART
+// ***************************************************************************************
 
-//*******************************************
-// var urlTracks = 'https://api.spotify.com/v1/tracks';
-// var urlAudioFeatures = 'https://api.spotify.com/v1/audio-features?ids=7ouMYWpwJ422jRcDASZB7P%2C4VqPOruhp5EdPBeR92t6lQ%2C2takcwOaAZWiXQijPHIx7B';
-// var urlPlaylists = 'https://api.spotify.com/v1/browse/categories/mood/playlists?country=US&limit=50'
-// var urlCategories = 'https://api.spotify.com/v1/browse/categories?country=US&limit=50&offset=5'
-//var urlRecommendations = 'https://api.spotify.com/v1/recommendations?seed_genres=pop,hip-hop,rock,latin,indie&min_valence=0.8&max_valence=1.0&min_energy=0.8&max_energy=1.0&min_dancibility=0.8&max_dancibility=1.0&limit=5&market=US'
-// SPOTIFY AJAX TO GET USER INFO
+// GETTING SPOTIFY USER PROFILE INFO 
     $.ajax({
         url: "https://api.spotify.com/v1/me",
         type: "GET",
@@ -72,33 +72,24 @@ if (!_token) {
            var userName = data.display_name;    
            var userImagesArray = data.images;    
            console.log(data.display_name);
+           // Show user name
            $('<span>Welcome, </span><span id="userNameSpan">'+userName+'</span>').insertAfter( "#insertAfterHere" );
-          // Check if the user have profile image
-//           if (userImagesArray != emptyArray){
-               $('#userAvatar').attr('src',userImagesArray[0].url);
-                //alert(userImagesArray[0].url);
-//           }else {
-//               $('#userAvatar').attr('src','assets/img/userNullAvatar.png');
+           // Show user Avatar img
+           $('#userAvatar').attr('src',userImagesArray[0].url);
            }   
-        
-     })
+    })
               
     .fail(function() {
-        // alert("error");
         console.log("error");
     });
 
-//*******************************************
-// GET USER INPUT
+// ***************************************************************************************T
 
-//ClEAR SUBMIT FORM
+// ClEAR INPUT
 function clearInput(){
     var blank = '';
     $('#userInput').val(blank);
 }
-
-var userButton = $('#userButton');
-var userInput = '';
 
 function submitInput(){
 //    click button
@@ -129,12 +120,13 @@ function avoidSubmit(){
     $("#form1").submit(function(e){
     return false;
 });
+
 }
-// END OF "GET USER INPUT"
+
 //*******************************************
 
 // PUSH USER INPUT TO FIREBASE
-//*******************************************
+// firebase connection
 var config = {
    apiKey: "AIzaSyCZFZD9VetVU0fqwvvXZEYFVaOW8y9XPP8",
    authDomain: "vibez-c9079.firebaseapp.com",
@@ -162,11 +154,6 @@ var sendString = function(string){
     );
 };
 
-//form utility
-//-------------------------------------------------------------------
-// var resetForm = function(form){
-//   $("input").val("");
-// };
 var getFieldValue = function(form){
   return $("#userInput").val().trim().toLowerCase();
 };
@@ -182,8 +169,6 @@ var handleStringPush = function(snapshot){
   updateStrings(snapshot);
 }
 //-------------------------------------------------------------------
-
-
 
 //UI change
 //-------------------------------------------------------------------
@@ -204,7 +189,6 @@ var usePastSearch = function(){
   $("input[name='userString']").val(buttonText);
 }
 //-------------------------------------------------------------------
-
 
 //Bind Event Handler
 //-------------------------------------------------------------------
