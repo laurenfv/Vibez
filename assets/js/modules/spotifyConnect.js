@@ -164,7 +164,7 @@ var moodMaker = function(number){
   }
 }
 
-function changeColor() {
+var changeColor = function() {
     if (mood === "mad") {
         $("section#content").css("-webkit-animation", " " + bg-color1 + " 10s infinite");
     }
@@ -241,7 +241,6 @@ function ajaxCall() {
         azureScore = moodMaker(score);
         console.log(azureScore);
         queryURL = urlMaker(azureScore);
-        changeColor();
     })
     .then(function(){
     // SPOTIFY AJAX TO GET TRACKS  
@@ -258,6 +257,7 @@ function ajaxCall() {
              }
              console.log(displaySongs);
              appendIframes();
+             changeColor();
              
           //       
         }
