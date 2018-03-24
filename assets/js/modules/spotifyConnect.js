@@ -174,7 +174,7 @@ var getFieldValue = function(form){
 //event handler
 //-------------------------------------------------------------------
 var handleStringSubmit = function(event){
-  event.preventDefault();
+  //event.preventDefault();
   sendString(userInput);
   // resetForm(this);
 }
