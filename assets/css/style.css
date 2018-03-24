@@ -3926,21 +3926,21 @@ section #content {
   }
 
   @-webkit-keyframes bg-color1 {
-  0% { background-color: #e74c3c; }
-  20% { background-color: #f1c40f; }
-  40% { background-color: #1abc9c; }
-  60% { background-color: #3498db; }
-  80% { background-color: #9b59b6; }
-  100% { background-color: #e74c3c; }
+  0% { background-color: #cf7c73; }
+  20% { background-color: #f7e6a5; }
+  40% { background-color: #94e7d7; }
+  60% { background-color: #96c4e2; }
+  80% { background-color: #b59bc0; }
+  100% { background-color: #ecb2ac; }
   }
 
   @keyframes bg-color1 {
-  0% { background-color: #e74c3c; }
-  20% { background-color: #f1c40f; }
-  40% { background-color: #1abc9c; }
-  60% { background-color: #3498db; }
-  80% { background-color: #9b59b6; }
-  100% { background-color: #e74c3c; }
+    0% { background-color: #cf7c73; }
+    20% { background-color: #f7e6a5; }
+    40% { background-color: #94e7d7; }
+    60% { background-color: #96c4e2; }
+    80% { background-color: #b59bc0; }
+    100% { background-color: #ecb2ac; }
   }
 
 #userInput {
