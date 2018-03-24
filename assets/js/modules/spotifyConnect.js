@@ -192,14 +192,14 @@ var updateStrings = function(snapshot){
     return;
   }
   //*READS FROM FIREBASE
-  $("#stringHolder").prepend(
+  $("#stringHolder").append(
     "<li><a href='#'><i class='icon-music-tone icon pastSearch'></i><span>" + snapshot.val().search + "</span></a></li>"
    //"<button class=pastSearch>" + snapshot.val().search + "</button>"
    )
   //*READS FROM FIREBASE
 }
 var usePastSearch = function(){
-  var buttonText = $(this).text();
+  var buttonText = $('.pastSearch').text();
   $("input[name='userString']").val(buttonText);
 }
 //-------------------------------------------------------------------
