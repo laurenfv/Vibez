@@ -3925,7 +3925,7 @@ section #content {
   -webkit-animation: bg-color 10s infinite;
   }
 
-  @-webkit-keyframes bg-color1 {
+  @-webkit-keyframes bg-color {
   0% { background-color: #cf7c73; }
   20% { background-color: #f7e6a5; }
   40% { background-color: #94e7d7; }
@@ -3934,7 +3934,7 @@ section #content {
   100% { background-color: #ecb2ac; }
   }
 
-  @keyframes bg-color1 {
+  @keyframes bg-color {
     0% { background-color: #cf7c73; }
     20% { background-color: #f7e6a5; }
     40% { background-color: #94e7d7; }
