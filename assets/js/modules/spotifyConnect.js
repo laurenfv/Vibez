@@ -166,24 +166,24 @@ var moodMaker = function(number){
 
 var changeColor = function() {
     if (mood === "mad") {
-        $("section#content").css("-webkit-animation", " bg-color1 10s infinite");
-        $("section#content").css("animation", " bg-color1 10s infinite");
+        $("section #content").css("-webkit-animation", " bg-color1 10s infinite");
+        $("section #content").css("animation", " bg-color1 10s infinite");
     }
     if (mood === "sad"){
-        $("section#content").css("-webkit-animation", " bg-color2 10s infinite");
-        $("section#content").css("animation", " bg-color2 10s infinite");
+        $("section #content").css("-webkit-animation", " bg-color2 10s infinite");
+        $("section #content").css("animation", " bg-color2 10s infinite");
     }
     if (mood === "neutral"){
-        $("section#content").css("-webkit-animation", " bg-color3 10s infinite");
-        $("section#content").css("animation", " bg-color3 10s infinite");
+        $("section #content").css("-webkit-animation", " bg-color3 10s infinite");
+        $("section #content").css("animation", " bg-color3 10s infinite");
     }
     if (mood === "happy"){
-        $("section#content").css("-webkit-animation", " bg-color4 10s infinite");
-        $("section#content").css("animation", " bg-color4 10s infinite");
+        $("section #content").css("-webkit-animation", " bg-color4 10s infinite");
+        $("section #content").css("animation", " bg-color4 10s infinite");
     }
     if (mood === "ecstatic"){
-        $("section#content").css("-webkit-animation", " bg-color5 10s infinite");
-        $("section#content").css("animation", " bg-color5 10s infinite");
+        $("section #content").css("-webkit-animation", " bg-color5 10s infinite");
+        $("section #content").css("animation", " bg-color5 10s infinite");
     }
 }
 
