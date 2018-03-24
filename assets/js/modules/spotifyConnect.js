@@ -106,7 +106,7 @@ function submitInput(){
         $('#userInput').attr('placeholder',' ');
         displaySongs = [];
         userInput = $('#userInput').val().trim().toLowerCase();
-        handleStringSubmit;
+        handleStringSubmit();
         clearInput();
         ajaxCall();   
         displayInput();   
