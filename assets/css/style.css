@@ -3919,28 +3919,28 @@ fieldset[disabled] .i-checks input + i:before {
   }
 }
 
-section #content {
+html {
   background-color: #e74c3c;
-  animation: bg-color1 10s infinite;
-  -webkit-animation: bg-color 10s infinite;
+  animation: bg-color 15s infinite;
+  -webkit-animation: bg-color 15s infinite;
   }
 
-  @-webkit-keyframes bg-color1 {
-  0% { background-color: #e74c3c; }
-  20% { background-color: #f1c40f; }
-  40% { background-color: #1abc9c; }
-  60% { background-color: #3498db; }
-  80% { background-color: #9b59b6; }
-  100% { background-color: #e74c3c; }
+  @-webkit-keyframes bg-color {
+  0% { background-color: #ecb2ac; }
+  20% { background-color: #f7e6a5; }
+  40% { background-color: #94e7d7; }
+  60% { background-color: #4cb6cba6; }
+  80% { background-color: #b59bc0; }
+  100% { background-color: #ecb2ac; }
   }
 
-  @keyframes bg-color1 {
-  0% { background-color: #e74c3c; }
-  20% { background-color: #f1c40f; }
-  40% { background-color: #1abc9c; }
-  60% { background-color: #3498db; }
-  80% { background-color: #9b59b6; }
-  100% { background-color: #e74c3c; }
+  @keyframes bg-color {
+    0% { background-color: #ecb2ac; }
+    20% { background-color: #f7e6a5; }
+    40% { background-color: #94e7d7; }
+    60% { background-color: #4cb6cba6; }
+    80% { background-color: #b59bc0; }
+    100% { background-color: #ecb2ac; }
   }
 
 #userInput {
@@ -3974,11 +3974,16 @@ section #content {
   color: #fff;
 }
 
-a.navbar-brand.text-lt {
+/* a.navbar-brand.text-lt {
   background-color: #fff;
 }
 
 .bg-info {
   background-color: #fff;
   box-shadow: 0 4px 1px 0 rgba(0, 0, 0, 0.3);
+} */
+@media (max-width: 767px){
+  input#userInput.form-control {
+    font-size: 10px;
+  }
 }
