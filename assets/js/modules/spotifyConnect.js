@@ -167,12 +167,9 @@ var sendString = function(string){
 //   $("input").val("");
 // };
 var getFieldValue = function(form){
-  return $("#form1").find("input").val();
+  return $("#userInput").val().trim().toLowerCase();
 };
 //-------------------------------------------------------------------
-
-
-
 //event handler
 //-------------------------------------------------------------------
 var handleStringSubmit = function(event){
