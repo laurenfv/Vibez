@@ -210,7 +210,7 @@ $("#form1").submit(handleStringSubmit);
 
 StringsRef.on("child_added", handleStringPush);
 
-event listener for usePastSearch
+//event listener for usePastSearch
 $("#stringHolder").on("click", '.pastSearch', usePastSearch);
 //-------------------------------------------------------------------
 
