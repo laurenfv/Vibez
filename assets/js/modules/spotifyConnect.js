@@ -83,7 +83,6 @@ if (!_token) {
         console.log("error");
     });
 
-// ***************************************************************************************T
 
 // ClEAR INPUT
 function clearInput(){
@@ -327,9 +326,6 @@ function ajaxCall() {
              }
              console.log(displaySongs);
              appendIframes();
-            //  changeColor();
-             
-          //       
         }
      })
     })
