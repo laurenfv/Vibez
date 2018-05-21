@@ -1,7 +1,7 @@
 # Vibez
 > This front-end web app takes any sentence and returns music based on that sentence's emotion. It does so by using the Microsoft Azure Text Analytics API to get the sentiment value from a sentence or phrase, and then, using that data the app queries the Spotify API for songs of matching energy, valence, and danceability.
 
-![](header.png)
+![picture](assets/img/test4.png)
 
 ## Technologies Used
 
